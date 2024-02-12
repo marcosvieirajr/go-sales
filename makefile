@@ -21,3 +21,26 @@ sales-api:
 		--build-arg BUILD_REF=$(VERSION) \
 		--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%sZ"` \
 		. 
+
+
+# ==============================================================================
+# Running from within k8s/kind
+
+KIND := kindest/node:v1.26.14
+KIND_CLUSTER := ardam-cluster
+
+kind-up:
+	kind create cluster \
+		--image $(KIND) \
+		--name $(KIND_CLUSTER) \
+		--config zarf/k8s/kind/kind-config.yaml
+
+	kubectl config set-context --current --namespace=sales-system
+
+	# kind load docker-image $(POSTGRES) --name $(KIND_CLUSTER)
+	# kind load docker-image $(GRAFANA) --name $(KIND_CLUSTER)
+	# kind load docker-image $(PROMETHEUS) --name $(KIND_CLUSTER)
+	# kind load docker-image $(TEMPO) --name $(KIND_CLUSTER)
+	# kind load docker-image $(LOKI) --name $(KIND_CLUSTER)
+	# kind load docker-image $(PROMTAIL) --name $(KIND_CLUSTER)
+
