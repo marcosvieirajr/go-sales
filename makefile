@@ -44,3 +44,6 @@ kind-up:
 	# kind load docker-image $(LOKI) --name $(KIND_CLUSTER)
 	# kind load docker-image $(PROMTAIL) --name $(KIND_CLUSTER)
 
+kind-down:
+	kind delete cluster --name $(KIND_CLUSTER)
+	
