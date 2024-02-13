@@ -55,3 +55,8 @@ kind-apply:
 	kustomize build zarf/k8s/kind/sales-pod | kubectl apply -f -
 	# cat zarf/k8s/base/sales-pod/base-sales.yaml | kubectl apply -f -
 
+kind-status:
+	kubectl get nodes -o wide
+	kubectl get svc -o wide
+	kubectl get pods -o wide --watch --all-namespaces
+
