@@ -69,3 +69,5 @@ kind-logs:
 kind-restart:
 	kubectl rollout restart deployment sales
 
+kind-update: all kind-load kind-restart
+
