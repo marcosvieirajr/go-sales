@@ -63,3 +63,6 @@ kind-status:
 kind-status-sales:
 	kubectl get pods -o wide --watch
 
+kind-logs:
+	kubectl logs -l app=sales --all-containers=true -f --tail=100 | go run app/tooling/logfmt/main.go
+
