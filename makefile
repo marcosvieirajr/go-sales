@@ -60,3 +60,6 @@ kind-status:
 	kubectl get svc -o wide
 	kubectl get pods -o wide --watch --all-namespaces
 
+kind-status-sales:
+	kubectl get pods -o wide --watch
+
