@@ -66,3 +66,6 @@ kind-status-sales:
 kind-logs:
 	kubectl logs -l app=sales --all-containers=true -f --tail=100 | go run app/tooling/logfmt/main.go
 
+kind-restart:
+	kubectl rollout restart deployment sales
+
