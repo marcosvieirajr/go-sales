@@ -75,3 +75,11 @@ kind-update-apply: all kind-load kind-apply
 
 kind-describe:
 	kubectl describe pod -l app=sales
+
+
+# ==============================================================================
+# Modules support
+
+tidy:
+	go mod tidy
+	go mod vendor
