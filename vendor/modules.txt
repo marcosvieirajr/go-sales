@@ -1,14 +1,6 @@
 # github.com/ardanlabs/conf v1.5.0
 ## explicit; go 1.13
 github.com/ardanlabs/conf
-# github.com/go-json-experiment/json v0.0.0-20240418180308-af2d5061e6c2
-## explicit; go 1.21
-github.com/go-json-experiment/json
-github.com/go-json-experiment/json/internal
-github.com/go-json-experiment/json/internal/jsonflags
-github.com/go-json-experiment/json/internal/jsonopts
-github.com/go-json-experiment/json/internal/jsonwire
-github.com/go-json-experiment/json/jsontext
 # go.uber.org/automaxprocs v1.5.3
 ## explicit; go 1.18
 go.uber.org/automaxprocs/internal/cgroups
